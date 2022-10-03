@@ -43,7 +43,6 @@ if (require.main === require.cache[eval('__filename')]) {
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const os = __nccwpck_require__(2037);
-const path = __nccwpck_require__(1017);
 
 // https://nodejs.org/api/os.html#os_os_arch
 function mapArch(arch) {
@@ -65,7 +64,7 @@ function getDownloadObject(version) {
   const platform = os.platform();
   const filename = `konjure-${ mapOS(platform) }-${ mapArch(os.arch()) }`;
   const extension = platform === 'win32' ? 'zip' : 'tar.gz';
-  const binPath = platform === 'win32' ? 'bin' : '';
+  const binPath = platform === 'win32' ? 'bin' : filename;
   const url = `https://github.com/thestormforge/konjure/releases/download/v${ version }/${ filename }.${ extension }`;
   return {
     url,
