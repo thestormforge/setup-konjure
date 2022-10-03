@@ -65,7 +65,7 @@ function getDownloadObject(version) {
   const platform = os.platform();
   const filename = `konjure-${ mapOS(platform) }-${ mapArch(os.arch()) }`;
   const extension = platform === 'win32' ? 'zip' : 'tar.gz';
-  const binPath = platform === 'win32' ? 'bin' : filename;
+  const binPath = platform === 'win32' ? 'bin' : '';
   const url = `https://github.com/thestormforge/konjure/releases/download/v${ version }/${ filename }.${ extension }`;
   return {
     url,
