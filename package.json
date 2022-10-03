@@ -1,0 +1,26 @@
+{
+  "name": "setup-konjure",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "all": "npm run lint && npm run prepare"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/thestormforge/setup-konjure",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thestormforge/setup-konjure.git"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.34.0",
+    "eslint": "^7.4.0"
+  }
+}

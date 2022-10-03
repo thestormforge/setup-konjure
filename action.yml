@@ -1,0 +1,10 @@
+name: setup-konure
+description: Setup Konjure on GitHub Actions runners
+inputs:
+  version:
+    description: Version of Konjure to install
+    required: false
+    default: 0.3.20
+runs:
+  using: node16
+  main: dist/index.js
