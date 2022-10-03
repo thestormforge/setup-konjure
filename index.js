@@ -18,6 +18,7 @@ async function setup() {
 
     // Expose the tool by adding it to the PATH
     core.addPath(path.join(pathToCLI, download.binPath));
+    core.info(`Successfully setup konjure version ${ version }`);
   } catch (e) {
     core.setFailed(e);
   }

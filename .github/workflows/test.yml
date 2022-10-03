@@ -21,8 +21,8 @@ jobs:
       run: npm clean-install
     - name: Verify
       run: |
-        npm run build
-        # Fail if "npm run build" generated new changes in dist
+        npm run prepare
+        # Fail if "npm run prepare" generated new changes in dist
         git update-index --refresh dist/* && git diff-index --quiet HEAD dist
     - name: Lint
       run: npm run all
