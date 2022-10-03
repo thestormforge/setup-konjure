@@ -50,5 +50,4 @@ jobs:
     - name: No boom
       if: ${{ matrix.version != 'latest' }}
       run: |
-        find "${PATH%%:*}"
-        konjure version | grep ${{ matrix.version }}
+        konjure --version | grep ${{ matrix.version }}
