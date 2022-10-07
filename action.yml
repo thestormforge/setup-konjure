@@ -4,7 +4,7 @@ inputs:
   version:
     description: Version of Konjure to install
     required: false
-    default: 0.3.20
+    default: latest
 runs:
   using: node16
   main: dist/index.js
