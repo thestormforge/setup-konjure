@@ -1,4 +1,6 @@
-# 🧙‍ + :octocat: Setup Konjure
+# 🧙‍ Setup Konjure
+
+[![Tests](https://github.com/thestormforge/setup-konjure/actions/workflows/test.yml/badge.svg)](https://github.com/thestormforge/setup-konjure/actions/workflows/test.yml)
 
 This action configures your GitHub Actions Runner to use the Konjure CLI.
 
