@@ -34,10 +34,16 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
         version:
-        #- 'latest'
-        #- 'v0.3.20'
+        - 'latest'
+        - 'v0.3.20'
         - '0.3.20'
-        #- '0.3'
+        - '0.3'
+        # Skip macOS builds that would require GitHub API access
+        exclude:
+        - os: macos-latest
+          version: 'latest'
+        - os: macos-latest
+          version: '0.3'
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -48,6 +54,4 @@ jobs:
         version: ${{ matrix.version }}
 
     - name: No boom
-      if: ${{ matrix.version != 'latest' }}
-      run: |
-        konjure --version | grep ${{ matrix.version }}
+      run: konjure --version
