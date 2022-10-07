@@ -1,4 +1,4 @@
-# Setup Konjure
+# 🧙‍ + :octocat: Setup Konjure
 
 This action configures your GitHub Actions Runner to use the Konjure CLI.
 
@@ -10,5 +10,5 @@ steps:
   with:
     # Version of the Konjure CLI to install.
     version:
-      0.3.20
+      latest
 ```
