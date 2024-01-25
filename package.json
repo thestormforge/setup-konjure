@@ -16,13 +16,13 @@
     "url": "git+https://github.com/thestormforge/setup-konjure.git"
   },
   "dependencies": {
-    "@actions/core": "^1.9.1",
+    "@actions/core": "^1.10.1",
     "@actions/tool-cache": "^2.0.1",
-    "@octokit/rest": "^18.9.1",
-    "semver": "^7.3.5"
+    "@octokit/rest": "^20.0.2",
+    "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.34.0",
-    "eslint": "^7.4.0"
+    "@vercel/ncc": "0.38.1",
+    "eslint": "^8.56.0"
   }
 }
