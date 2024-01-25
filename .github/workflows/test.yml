@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
-    - name: Setup Node.js 16.x
-      uses: actions/setup-node@v3
+      uses: actions/checkout@v4
+    - name: Setup Node.js 20
+      uses: actions/setup-node@v4
       with:
-        node-version: '16.x'
+        node-version: '20'
     - name: Install
       run: npm clean-install
     - name: Verify
@@ -35,18 +35,18 @@ jobs:
         os: [macos-latest, ubuntu-latest]
         version:
         - 'latest'
-        - 'v0.3.20'
-        - '0.3.20'
-        - '0.3'
+        - 'v0.4.6'
+        - '0.4.6'
+        - '0.4'
         # Skip macOS builds that would require GitHub API access
         exclude:
         - os: macos-latest
           version: 'latest'
         - os: macos-latest
-          version: '0.3'
+          version: '0.4'
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup konjure
       uses: ./
