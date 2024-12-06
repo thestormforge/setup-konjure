@@ -8,7 +8,7 @@ This action configures your GitHub Actions Runner to use the Konjure CLI.
 
 ```yaml
 steps:
-- uses: thestormforge/setup-konjure@v1
+- uses: thestormforge/setup-konjure@v2
   with:
     # Version of the Konjure CLI to install.
     version:
