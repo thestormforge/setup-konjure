@@ -1,7 +1,7 @@
-const path = require('path');
-const core = require('@actions/core');
-const tc = require('@actions/tool-cache');
-const { getDownloadObject } = require('./lib/utils');
+import path from 'node:path';
+import * as core from '@actions/core';
+import * as tc from '@actions/tool-cache';
+import { getDownloadObject } from './lib/utils.js';
 
 async function setup() {
   try {
@@ -24,8 +24,6 @@ async function setup() {
   }
 }
 
-module.exports = setup
+export default setup;
 
-if (require.main === module) {
-  setup();
-}
+await setup();

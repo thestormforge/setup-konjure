@@ -1,4 +1,4 @@
-name: setup-konure
+name: setup-konjure
 description: Setup Konjure on GitHub Actions runners
 inputs:
   version:
@@ -6,5 +6,5 @@ inputs:
     required: false
     default: latest
 runs:
-  using: node20
+  using: node24
   main: dist/index.js
